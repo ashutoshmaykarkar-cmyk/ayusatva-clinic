@@ -14,5 +14,5 @@ window.SITE_CONFIG = {
   phone: "+91 89990 76715",
   email: "vaishnaviw2@gmail.com",
   whatsappNumber: "918999076715",
-  websiteUrl: "" // e.g. https://your-real-domain.com
+  websiteUrl: "https://www.ayusatvaclinic.com" // e.g. https://your-real-domain.com
 };

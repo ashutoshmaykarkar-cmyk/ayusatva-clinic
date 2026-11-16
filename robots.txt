@@ -1,5 +1,5 @@
 # Robots.txt for Ayusatva Ayurved & Panchkarma Clinic
-# https://ayusatvaclinic.in
+# https://www.ayusatvaclinic.com
 
 User-agent: *
 Allow: /
