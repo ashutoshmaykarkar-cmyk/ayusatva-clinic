@@ -1,0 +1,115 @@
+
+/* AYUSATVA — premium photographic therapy atlas */
+:root { --premium-deep:#15382d;--premium-cream:#f8f2e7;--premium-ink:#203c30;--premium-gold:#b68d4e }
+.therapy-gallery { background: #f7f0e4; border-color:#e4d6bf; position:relative }
+.therapy-gallery::before { content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 8% 0,#fdf9f0 0,transparent 43%), radial-gradient(circle at 94% 88%,#ebdfc7 0,transparent 40%) }
+.therapy-gallery>.container {position:relative}
+.premium-section-heading {display:grid;grid-template-columns:minmax(0,1.45fr) minmax(235px,.55fr);gap:58px;align-items:end;border-bottom:1px solid #d5c4a9;padding-bottom:27px}
+.premium-section-heading .eyebrow{margin-bottom:20px}.premium-section-heading h2{color:#1c4233;font-size:clamp(47px,5.2vw,75px);max-width:780px}
+.premium-section-aside{padding-left:25px;border-left:2px solid #b68d4e}
+.premium-section-aside>span{font:600 19px var(--dev);color:#a37c47}
+.premium-section-aside p{font-size:13px;line-height:1.8;color:#58675b;margin:9px 0 0}
+.therapy-filter{justify-content:flex-start;gap:10px;margin:32px 0 35px}
+.therapy-filter-btn{background:#fffaf0;border:1px solid #d8c9ab;border-radius:3px;letter-spacing:.025em;font-size:11px;text-transform:uppercase;padding:13px 17px;transition:background .2s,color .2s,transform .2s}
+.therapy-filter-btn.active{background:#1c4535;color:#fff;border-color:#1c4535}
+.therapy-filter-btn:focus-visible,.therapy-card a:focus-visible,.therapy-card button:focus-visible{outline:3px solid #ba9447;outline-offset:4px}
+.therapy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;perspective:1600px;align-items:stretch}
+.therapy-card-premium{border:1px solid #dbcdb5;background:#fffcf6;position:relative;min-width:0;isolation:isolate;overflow:hidden;box-shadow:0 14px 40px rgba(29,54,37,.09);display:flex;flex-direction:column;transform:perspective(1500px) rotateX(var(--premium-rotate-x,0deg)) rotateY(var(--premium-rotate-y,0deg)) translateZ(0);transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.7,.15,1),box-shadow .45s,opacity .2s;will-change:auto}
+.therapy-card-premium:hover{box-shadow:0 28px 60px #1b392a30}
+.therapy-card-premium .therapy-card-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#dcc9a1;flex-shrink:0;isolation:isolate}
+.therapy-card-premium .therapy-card-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(9,29,19,.5) 0,transparent 42%),linear-gradient(115deg,rgba(255,245,209,.16),transparent 44%)}
+.therapy-card-premium .therapy-card-media img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center;display:block;transform:scale(var(--premium-zoom,1)) translate3d(var(--premium-pan-x,0px),var(--premium-pan-y,0px),0);transition:transform .55s cubic-bezier(.2,.7,.15,1);will-change:transform}
+.therapy-card-premium:hover .therapy-card-media img{--premium-zoom:1.06}
+.therapy-photo-index{position:absolute;z-index:2;left:20px;top:20px;background:rgba(18,52,39,.88);color:#f5e5c3;border:1px solid #bfa87977;padding:9px 11px;font-size:10px;letter-spacing:.15em;font-weight:700}
+.therapy-photo-inscription{position:absolute;z-index:2;right:24px;bottom:18px;color:#fff2d7;font:500 30px var(--dev);text-shadow:0 2px 12px #07261a9c}
+.therapy-image-action{position:absolute;z-index:2;left:22px;bottom:22px;font-weight:800;letter-spacing:.13em;font-size:10px;color:#fff4dc;display:inline-flex;align-items:center;gap:11px}
+.therapy-image-action b{font-size:20px;font-weight:400}
+.therapy-card-premium .therapy-card-body{padding:27px 31px 28px;display:flex;flex-direction:column;flex:1;transform:translateZ(0)}
+.therapy-card-topline{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:13px}
+.therapy-card-premium .therapy-chip{margin:0;align-self:auto;border-radius:0;background:#e6eee5;color:#386044;font-size:9px;letter-spacing:.1em;padding:8px 11px}
+.therapy-micro-label{font-weight:700;font-size:9px;letter-spacing:.13em;color:#a18153;white-space:nowrap}
+.therapy-card-premium h3{margin:0 0 3px;font-size:clamp(32px,3.1vw,41px);letter-spacing:-.028em;line-height:1.1}
+.therapy-card-premium h3 a{display:inline-flex;align-items:center;flex-wrap:wrap;gap:10px;color:#204a38}
+.therapy-card-premium h3 small{font:500 17px var(--dev);color:#9d7846}
+.therapy-card-subtitle{font-family:var(--serif);font-size:20px!important;color:#9c774b!important;line-height:1.35!important;font-style:italic;margin:7px 0 12px!important}
+.therapy-card-description{font-size:13px!important;line-height:1.8!important;color:#58655c!important;max-width:520px;margin:0 0 23px!important}
+.therapy-card-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:auto;padding-top:15px;border-top:1px solid #e8decb}
+.therapy-guide-link{display:inline-flex;align-items:center;gap:13px;font-size:12px;font-weight:800;color:#214c38}.therapy-guide-link>span{color:#ba8d48;font-size:20px;font-weight:400}
+.therapy-quicklook{margin-left:auto;border:0;padding:7px 0;background:transparent;font-weight:700;font-size:11px;color:#986f3f}
+.therapy-quicklook span{font-size:17px;font-weight:400}
+.therapy-gallery-disclosure{font-size:11px;line-height:1.7;color:#687367;border-top:1px solid #d8c8a7;padding-top:15px;margin:28px 0 0}
+.therapy-card-premium.is-hidden{display:none}
+.therapy-spotlight{background:linear-gradient(130deg,#fffdf7,#f7f0e4)}
+.spotlight-layout{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:52px;align-items:start}
+.spotlight-panel{grid-template-columns:1fr;background:#fffdf8;box-shadow:0 18px 48px #14312320;transform:perspective(1200px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));}
+.spotlight-media{max-height:410px;min-height:0;overflow:hidden}
+.spotlight-media img{width:100%;height:410px;object-fit:cover;display:block}
+.spotlight-content{padding:32px 39px 39px}
+.spotlight-content h3{font-size:52px}
+.spotlight-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.spotlight-detail-link{font-size:12px;font-weight:800;color:#1d4b34;text-decoration:underline;text-underline-offset:6px}
+@media(max-width:1100px){.spotlight-layout{grid-template-columns:1fr}.premium-section-heading{gap:30px}.therapy-grid{gap:22px}}
+@media(max-width:770px){.premium-section-heading{grid-template-columns:1fr;gap:21px}.premium-section-aside{max-width:550px}.therapy-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.therapy-card-premium .therapy-card-body{padding:18px}.therapy-card-premium .therapy-card-media{aspect-ratio:4/3}.therapy-card-premium h3{font-size:29px}.therapy-card-premium h3 small{font-size:13px}.therapy-card-subtitle{font-size:17px!important}.therapy-card-description{font-size:12px!important}.therapy-micro-label{display:none}.therapy-card-actions{gap:9px}.therapy-quicklook{margin-left:0}.spotlight-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.therapy-grid{grid-template-columns:1fr;gap:23px}.premium-section-heading h2{font-size:clamp(44px,10vw,60px)}.therapy-card-premium .therapy-card-media{aspect-ratio:16/11}.therapy-card-premium .therapy-card-body{padding:23px 22px 25px}.therapy-card-premium h3{font-size:35px}.therapy-card-premium h3 small{font-size:16px}.therapy-micro-label{display:inline}.spotlight-media img{height:270px}.spotlight-content{padding:26px 22px}.spotlight-content h3{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.therapy-card-premium,.therapy-card-premium .therapy-card-media img{transition:none!important;transform:none!important}.therapy-card-premium:hover .therapy-card-media img{transform:none!important}}
+
+
+/* Ayusatva doctor credentials and premium contact section */
+.doctor-profile-visual {isolation:isolate}
+.doctor-profile-visual>img {filter:saturate(.87) contrast(1.04)}
+.doctor-visual-inscription{position:absolute;z-index:1;left:22px;bottom:21px;display:flex;flex-direction:column;gap:8px;color:#fff6de;text-shadow:0 2px 8px #0d2b1f91}
+.doctor-visual-inscription span:first-child{font:500 21px var(--dev)}
+.doctor-visual-inscription span:last-child{font-size:9px;letter-spacing:.16em;font-weight:700}
+.doctor-rank-seal{position:absolute;z-index:3;right:-30px;bottom:66px;background:linear-gradient(155deg,#fef8e9,#e8d3a4);border:2px solid #b78e43;outline:1px solid #e8d2ab;outline-offset:-10px;width:155px;height:155px;border-radius:50%;box-shadow:0 16px 30px #1c392d2a;display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;gap:5px;color:#274937}
+.doctor-rank-seal .rank-number{font:600 45px/.9 var(--serif);letter-spacing:-.08em}.doctor-rank-seal sup{font:600 14px var(--sans);letter-spacing:0}.doctor-rank-seal>span:nth-child(2){font-size:9px;font-weight:800;letter-spacing:.1em}.doctor-rank-seal small{font-size:10px;letter-spacing:.15em;color:#9f7237;font-weight:700}
+.doctor-profile-copy h2{font-size:clamp(40px,4vw,64px);line-height:1.07;letter-spacing:-.055em;margin-bottom:14px}
+.doctor-lastname{font-size:.67em;letter-spacing:-.025em;display:inline-block}
+.doctor-profile-copy .doctor-intro{font:600 12px var(--sans)!important;letter-spacing:.12em;text-transform:uppercase;color:#946c38!important;margin:0 0 22px!important}
+.doctor-profile-copy p{line-height:1.76}.doctor-profile-copy strong{color:#304d3c;font-weight:700}
+.doctor-credentials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 23px}
+.doctor-credential{display:flex;align-items:flex-start;gap:11px;background:#f8f1e3;border:1px solid #d9c8a8;padding:17px 15px;min-width:0}
+.doctor-credential .credential-icon{flex-shrink:0;color:#a68045;font-size:16px;line-height:1.3}
+.doctor-credential>div{min-width:0;display:flex;flex-direction:column;gap:5px}
+.doctor-credential small{color:#93734c;font-size:9px;font-weight:800;letter-spacing:.1em;line-height:1.45}
+.doctor-credential strong{font:600 17px var(--serif);color:#264734;line-height:1.25}
+.doctor-credential>div>span{font-size:11px;line-height:1.5;color:#637165}
+.rank-credential{background:#e8d4ab;border-color:#c9a05c}
+.doctor-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.contact-section{position:relative;background:linear-gradient(137deg,#f4ecdc,#fffaf1 52%,#f6f0e2);border-top:1px solid #e5d8bc}
+.contact-heading-wrap{display:grid;grid-template-columns:1fr minmax(260px,420px);gap:60px;align-items:end;border-bottom:1px solid #dccdae;padding-bottom:28px;margin-bottom:28px}
+.contact-section h2{color:#203d32;letter-spacing:-.055em}
+.contact-heading-intro>p:first-child{color:#647265;font-size:14px;margin:0 0 9px}
+.contact-small-sanskrit{font:600 17px var(--dev);color:#9e7d49;margin:0}
+.contact-main-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch}
+.contact-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.contact-detail-card{min-width:0;background:#fffdf8;border:1px solid #dccdb7;padding:26px 22px;display:flex;gap:17px;box-shadow:0 10px 25px #213b3010}
+.contact-detail-symbol{color:#a17d44;background:#f5ecdc;border:1px solid #dfcda7;flex:0 0 42px;height:42px;display:grid;place-items:center;font:26px var(--serif)}
+.contact-detail-label{font-size:9px;font-weight:800;letter-spacing:.15em;color:#9b7a4a;margin:0 0 7px}
+.contact-detail-card h3{font-size:26px;line-height:1.2;color:#244633;margin-bottom:9px}
+.contact-detail-card p:not(.contact-detail-label){color:#445a4b;font-size:14px;font-weight:600;line-height:1.6;margin:0 0 9px;overflow-wrap:anywhere}
+.contact-detail-card small{font-size:11px;line-height:1.7;color:#7d8278}
+.contact-visit-panel{position:relative;overflow:hidden;padding:38px 34px;background:#1c4133;color:#f7eee0;display:flex;flex-direction:column;justify-content:center}
+.contact-visit-panel .eyebrow{margin-bottom:15px}.contact-visit-panel h3{font-size:clamp(32px,3.1vw,44px);line-height:1.18;color:#fff3d9;margin:0 0 16px}.contact-visit-panel h3 em{font-weight:400;color:#ddbc83}
+.contact-visit-panel>p:not(.eyebrow){font-size:13px;line-height:1.85;color:#d0dcd2;max-width:420px;margin:0 0 20px}
+.contact-visit-rule{margin:6px 0 25px;padding-top:14px;border-top:1px solid #7a907d6e;color:#dbc194;font:500 17px var(--dev)}
+.contact-visit-panel .button{width:max-content;max-width:100%;z-index:2}
+.contact-visit-panel>small{font-size:10px;color:#c0d0c2;line-height:1.6;margin-top:15px;max-width:340px}
+.contact-visit-ornament{position:absolute;right:-38px;top:-64px;color:#f0d6a4;opacity:.1;font-size:250px;line-height:1}
+@media(max-width:1150px){.desktop-nav{gap:10px}.desktop-nav>a{font-size:10px}.contact-main-grid{grid-template-columns:1fr}.contact-visit-panel{min-height:285px}}
+@media(max-width:960px){.doctor-credentials{grid-template-columns:1fr}.contact-heading-wrap{grid-template-columns:1fr;gap:10px}.contact-heading-intro{max-width:630px}}
+@media(max-width:700px){.doctor-rank-seal{width:116px;height:116px;right:-13px;bottom:37px}.doctor-rank-seal .rank-number{font-size:35px}.doctor-rank-seal>span:nth-child(2){font-size:7px}.doctor-rank-seal small{font-size:8px}.doctor-visual-inscription{left:14px;bottom:20px}.doctor-profile-copy h2{font-size:clamp(38px,8.5vw,54px)}.contact-card-grid{grid-template-columns:1fr}.contact-heading-wrap{margin-bottom:20px}.contact-visit-panel{padding:30px 24px}}
+@media(max-width:440px){.doctor-visual-inscription span:first-child{font-size:16px}.doctor-visual-inscription span:last-child{font-size:7px}.doctor-rank-seal{right:-5px;bottom:45px}.doctor-credential{padding:15px 12px}.doctor-actions{flex-direction:column;align-items:stretch}.doctor-actions .text-link{width:max-content}.contact-detail-card{padding:21px 17px}.contact-detail-card h3{font-size:24px}}
+
+
+/* Authentic doctor portrait — added from supplied clinic photo */
+.doctor-profile-visual{max-width:540px;filter:none;position:relative}
+.doctor-profile-visual .doctor-photo-picture{display:block;width:100%;position:relative;isolation:isolate;border:9px solid #fffaf0;outline:1px solid #c9ae79;background:#d6e8df;box-shadow:16px 16px 0 #d6c4a5,0 28px 48px #1b352523;overflow:hidden}
+.doctor-profile-visual .doctor-portrait{display:block;width:100%;height:610px;object-fit:cover;object-position:center 48%;filter:none;transition:transform .65s cubic-bezier(.22,1,.36,1);box-shadow:none}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.doctor-profile-visual:hover .doctor-portrait{transform:scale(1.025)}}
+.doctor-profile-visual .doctor-visual-inscription{position:relative;left:auto;bottom:auto;z-index:2;background:#204737;color:#f8ecd0;text-shadow:none;padding:16px 20px;margin:0 9px 0 9px;border:1px solid #b79a5a;border-top:0;box-shadow:10px 13px 0 #d6c4a5}
+.doctor-profile-visual .doctor-visual-inscription span:first-child{font-size:17px}
+.doctor-profile-visual .doctor-visual-inscription span:last-child{font-size:9px}
+.doctor-profile-visual .doctor-rank-seal{bottom:78px;right:-25px}
+@media(max-width:950px){.doctor-profile-visual .doctor-portrait{height:540px}}
+@media(max-width:700px){.doctor-profile-visual .doctor-photo-picture{border-width:6px;box-shadow:9px 9px 0 #d6c4a5}.doctor-profile-visual .doctor-portrait{height:445px;object-position:center 46%}.doctor-profile-visual .doctor-visual-inscription{padding:13px 16px;margin:0 6px;box-shadow:6px 8px 0 #d6c4a5}.doctor-profile-visual .doctor-rank-seal{bottom:70px;right:-14px}}
+@media(max-width:400px){.doctor-profile-visual .doctor-portrait{height:410px}.doctor-profile-visual .doctor-rank-seal{bottom:66px;right:-8px}}

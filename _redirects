@@ -1,0 +1,5 @@
+# Netlify redirects for Ayusatva Clinic
+/appointment      /#contact      301!
+/consultation     /#contact      301!
+/booking          /#contact      301!
+/schedule         /#contact      301!
