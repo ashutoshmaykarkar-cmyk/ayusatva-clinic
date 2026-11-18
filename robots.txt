@@ -1,5 +1,5 @@
 # Robots.txt for Ayusatva Ayurved & Panchkarma Clinic
-# https://www.ayusatvaclinic.com
+# https://ayusatvaclinic.netlify.app
 
 User-agent: *
 Allow: /
@@ -7,12 +7,6 @@ Allow: /
 # Disallow access to configuration, raw assets or server files
 Disallow: /_headers
 Disallow: /site-config.js
-Disallow: /*.json$
 
-# Block aggressive AI scrapers and automated vulnerability bots
-User-agent: ClaudeBot
-User-agent: GPTBot
-User-agent: CCBot
-User-agent: Bytespider
-User-agent: PetalBot
-Disallow: /
+# Sitemap location for search engines
+Sitemap: https://ayusatvaclinic.netlify.app/sitemap.xml
